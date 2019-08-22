@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" class="min-vh-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css"> <!--load all styles -->
+    <title>Lambda Academy</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="site-header flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light col-sm-12 align-items-sm-end">
+                    <a class="navbar-brand" href="#">
+                        <div class="header-logo">
+                            <div class="logo-circle"></div>
+                            <div class="logo-text">
+                                <div class="logo-label"></div>
+                                <div class="logo-tagline">Школа любви к математике</div>
+                            </div>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav m-auto px-3">
+                            <a class="nav-item nav-link active" href="index.html">О курсах</a>
+                            <a class="nav-item nav-link" href="daily.html">Расписание</a>
+                            <a class="nav-item nav-link" href="contacts.html">Контакты</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="fibonacci_spiral min-vh-100 h-100 flex-shrink-0 flex-grow-1 w-100 d-flex flex-column pb-5">
+        <div class="landing-main d-flex w-100 h-100 justify-content-end align-items-center flex-grow-1" style="padding-top: 158px;">
+            <div class="col-xl-7">
+                <div class="w-auto ml-xl-5 pl-xl-4">
+                    <h1 class="mb-xl-5">Мы – объединение педагогов, <br>разделяющих одни ценности и<br> взгляды на процесс обучения.</h1>
+                    <h2>Мы ведём два курса:<br>
+                        "Основы программирования" и<br>
+                        "Основы математической логики".</h2>
+                    <div>
+                        <div class="d-flex ml-xl-3 mt-xl-5 pt-xl-5">
+                            <button class="btn btn-lg btn-outline-success btn mr-xl-5">Написать нам</button>
+                            <button class="btn btn-lg btn-success" onclick="document.getElementById('about').scrollIntoView();">Подробности</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <article class="container pt-5 pb-5" id="about">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-3">О нас</h1>
+                <p class="lead">Что такое Lorem Ipsum?
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+            </div>
+        </div>
+    </article>
+    <footer class="footer mt-auto py-3 flex-shrink-0">
+        <div class="container h-100">
+            <div class="row justify-content-around align-items-center h-100">
+                <div class="col-4 footer-logo">
+                    <div class="logo-circle"></div>
+                    <div class="logo-label"></div>
+                </div>
+                <div class="col-4 copyright">
+                    © 2019 <span class="logo-label"></span>. All rights reserved.
+                </div>
+                <div class="col-4 d-flex justify-content-end">
+                    <button class="social-button">
+                        <i class="fab fa-vk"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fab fa-skype"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            var shrinkHeader = 100;
+            $(window).scroll(function() {
+                var scroll = getCurrentScroll();
+                if ( scroll >= shrinkHeader ) {
+                    $('.site-header').addClass('shrink');
+                }
+                else {
+                    $('.site-header').removeClass('shrink');
+                }
+            });
+            function getCurrentScroll() {
+                return window.pageYOffset || document.documentElement.scrollTop;
+            }
+        });
+    </script>
+    </body>
+</html>
